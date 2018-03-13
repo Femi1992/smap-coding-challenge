@@ -1,10 +1,7 @@
 from django.core.management.base import BaseCommand
-import csv, sys
+import csv, os
 
-from django.conf import settings
-
-
-import django
+os.environ['DJANGO_SETTINGS_MODULE'] = 'settings'
 
 from consumption.models import User, Consumption
 
