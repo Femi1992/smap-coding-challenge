@@ -2,13 +2,11 @@ from django.core.management.base import BaseCommand
 import csv, sys
 
 from django.conf import settings
-project_dir = "/Users/femi/PycharmProjects/smap-coding-challenge/dashboard"
-sys.path.append(project_dir)
-settings.configure(Debug=True)
+
 
 import django
-django.setup()
-from consumption.models import User
+
+from consumption.models import User, Consumption
 
 class Command(BaseCommand):
     help = 'import data'
